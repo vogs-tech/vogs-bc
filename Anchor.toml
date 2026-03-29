@@ -1,0 +1,23 @@
+[toolchain]
+anchor_version = "0.32.0"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+vogs_hook = "VHook1111111111111111111111111111111111111"
+vogs_vault = "VVau1t111111111111111111111111111111111111"
+vogs_settlement = "VSett1e111111111111111111111111111111111111"
+vogs_streams = "VStrm1111111111111111111111111111111111111"
+vogs_collateral = "VCo11at11111111111111111111111111111111111"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "bun test"

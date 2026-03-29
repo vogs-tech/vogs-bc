@@ -1,0 +1,21 @@
+[package]
+name = "vogs-settlement"
+version = "0.1.0"
+edition = "2024"
+description = "Cross-border FX settlement with oracle-based pricing"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "vogs_settlement"
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+spl-token-2022 = { workspace = true }
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []

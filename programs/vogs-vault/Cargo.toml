@@ -1,0 +1,21 @@
+[package]
+name = "vogs-vault"
+version = "0.1.0"
+edition = "2024"
+description = "Permissioned yield vaults with multi-protocol allocation"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "vogs_vault"
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+spl-token-2022 = { workspace = true }
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []

@@ -1,1 +1,17 @@
 /target
+node_modules/
+.anchor/
+test-ledger/
+dist/
+
+/.DS_Store
+.DS_Store
+
+/.idea
+/.vscode
+
+.git-identities.conf
+
+.env*
+!.env.example
+!.env.template

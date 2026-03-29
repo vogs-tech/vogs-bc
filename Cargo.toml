@@ -1,6 +1,21 @@
-[package]
-name = "vogs-bc"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+members = [
+    "programs/vogs-hook",
+    "programs/vogs-vault",
+    "programs/vogs-settlement",
+    "programs/vogs-streams",
+    "programs/vogs-collateral",
+]
+resolver = "2"
 
-[dependencies]
+[workspace.dependencies]
+anchor-lang = "0.32"
+anchor-spl = "0.32"
+spl-token-2022 = "5.0"
+spl-transfer-hook-interface = "0.8"
+spl-tlv-account-resolution = "0.8"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1

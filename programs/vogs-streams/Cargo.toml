@@ -1,0 +1,21 @@
+[package]
+name = "vogs-streams"
+version = "0.1.0"
+edition = "2024"
+description = "Payment streaming with per-second disbursement and milestone escrow"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "vogs_streams"
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+spl-token-2022 = { workspace = true }
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
